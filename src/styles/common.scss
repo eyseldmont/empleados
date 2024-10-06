@@ -1,0 +1,48 @@
+@mixin for-mobile{
+    ///Using min width for mobile first development
+    @media (min-width: 0px) {
+      @content;
+    }
+}
+
+@mixin for-desktop {
+  ///Breakpoint 840px
+  @media (min-width: 840px) {
+    @content;
+  }
+}
+
+@mixin flex-column-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@mixin flex-row-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin test-border($border-color){
+  border: 1px solid $border-color;
+}
+
+@mixin test{
+  border: 1px solid red;
+}
+
+
+@mixin button-stuff{
+  color: white;
+  background-color: rgb(33, 149, 244);
+  border-radius: 1.5em;
+  border: 0;
+}
+
+@mixin hover-button-stuff{
+  background-color: rgb(38, 135, 190);
+}

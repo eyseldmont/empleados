@@ -1,42 +1,51 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import './styles/common';
+
+html {
+    scroll-behavior: smooth;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.main-container {
+    margin: 0 0 0 0;
+    margin: 0;
+    display: flex;
+    height: 90vh; /* Full height of viewport */
+    flex-direction: column; 
+    text-align: center;
+    font-size: 1.5vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top-bar {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1000;
+    height: 6em; 
+    background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.list-container {
+    
+    background-color: white;
+    flex-grow: 1; /* Allow it to grow to take up remaining space */
+    overflow-y: auto; /* Make it scrollable if content overflows */
+    padding-top: 6em; /* Match the height of the top bar to avoid overlap */
+    padding-bottom: 7.5em; /* Adjust as needed for button */
 }
 
-.card {
-  padding: 2em;
+
+
+.add-button {
+    @include button-stuff;
+    position: fixed; /* Fix the button position */
+    bottom: 5vh; /* Position it 5vh from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to center */
+    font-size: smaller;
+    width: 80vw; /* Adjust width as needed */
 }
 
-.read-the-docs {
-  color: #888;
+.add-button:active {
+    @include hover-button-stuff;
 }

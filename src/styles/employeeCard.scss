@@ -1,0 +1,54 @@
+@import 'variables';
+@import 'common';
+
+
+
+.card-container{
+    @include flex-row-center;
+    text-align: start;
+    justify-content: space-between;
+    gap: 5em;
+    margin: 0 0 0 0;
+    border-radius: 1.5em;
+    margin-bottom: 1em;
+}
+.card-container:active{
+    background-color: rgb(236, 236, 236);
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column; /* Stack them vertically */
+    justify-content: center; /* Center items vertically */
+    min-height: 5.5em;
+    text-align: start;
+    width: 50vw;
+    padding: 0px;
+    margin-top: 0rem;
+    height: auto;
+    margin: 0 0 0 -5em;
+   
+}
+
+.card-img{
+    width: 5.5em;
+    height: 5.5em;
+    border-radius: 100%;
+}
+
+.card-icon{
+    height: 2.5em;
+    padding-left: 0;
+}
+
+.card-name{
+    font-size: 1.7em;
+    
+}
+
+///position as in job description not location
+.card-position{
+    font-size: 1.5em;
+    color: rgb(161, 161, 161);
+    margin-top: -0.7em;
+}
